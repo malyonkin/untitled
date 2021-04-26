@@ -19,7 +19,7 @@ class WebPageTest: setUp() {
     @BeforeEach
     fun setUp() {
         setUpBrowser(isMobile = false, isRemote = false)
-        open("https://master.autospot.ru/")
+        open("https://autospot.ru/")
     }
 
     @RepeatedTest(3)

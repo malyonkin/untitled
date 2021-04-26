@@ -22,7 +22,7 @@ class MobPageTest : setUp() {
     @BeforeEach
     fun setUp() {
         setUpBrowser(isMobile = true, isRemote = false)
-        open("https://master.autospot.ru/")
+        open("https://autospot.ru/")
     }
 
     @RepeatedTest(3)
