@@ -18,7 +18,9 @@ import setUp
 import java.io.ByteArrayInputStream
 import java.util.logging.Level
 
+//@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class MobPageTest : setUp() {
+
     @BeforeEach
     fun setUp() {
         setUpBrowser(isMobile = true, isRemote = false)
@@ -34,6 +36,6 @@ class MobPageTest : setUp() {
 
     @AfterEach
     fun afterScenario() {
-        Selenide.closeWebDriver()
+        //Selenide.closeWebDriver()
     }
 }

@@ -15,7 +15,9 @@ import setUp
 import java.io.ByteArrayInputStream
 import java.util.logging.Level
 
+//@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class WebPageTest: setUp() {
+
     @BeforeEach
     fun setUp() {
         setUpBrowser(isMobile = false, isRemote = false)
@@ -31,6 +33,6 @@ class WebPageTest: setUp() {
 
     @AfterEach
     fun afterScenario() {
-        Selenide.closeWebDriver() //данная команда запускает каждый тест в отдельном браузере
+        //Selenide.closeWebDriver() //данная команда запускает каждый тест в отдельном браузере
     }
 }

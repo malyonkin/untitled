@@ -6,6 +6,8 @@ import com.codeborne.selenide.logevents.SelenideLogger
 import io.qameta.allure.Allure
 import io.qameta.allure.selenide.AllureSelenide
 import org.junit.jupiter.api.AfterEach
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.TestInstance
 import org.openqa.selenium.Cookie
 import org.openqa.selenium.OutputType
 import org.openqa.selenium.TakesScreenshot
@@ -17,7 +19,12 @@ import java.io.ByteArrayInputStream
 import java.util.*
 import java.util.logging.Level
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 open class setUp {
+    @BeforeAll
+    fun beforeAllInit(){
+        Selenide.closeWebDriver()
+    }
 
         fun setUpBrowser(isMobile: Boolean, isRemote: Boolean) {
             Settings.isMobile = isMobile
