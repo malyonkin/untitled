@@ -1,4 +1,4 @@
-package mainPage
+package main2Page
 
 import com.codeborne.selenide.Condition.*
 import com.codeborne.selenide.Selectors
@@ -22,7 +22,7 @@ import java.util.logging.Level
 
 //@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 //@ExtendWith(BrowserStrategyExtension::class)
-class MobPageTest : setUp() {
+class MobPage1Test : setUp() {
 
     @BeforeEach
     fun settings() {
@@ -30,7 +30,7 @@ class MobPageTest : setUp() {
         open("https://autospot.ru/")
     }
 
-    @RepeatedTest(2)
+    @Test
     @DisplayName("Переход на страницу расширенного поиска")
     fun openAdvancedSearchTest() {
         element(byText("Расширенный поиск")).scrollTo().should(visible).click()

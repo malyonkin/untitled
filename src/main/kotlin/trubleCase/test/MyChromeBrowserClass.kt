@@ -23,7 +23,7 @@ class MyChromeBrowserClass : WebDriverProvider {
 
                 if(Settings.isMobile == true) {
                     //todo оптимизировать размер кода на System.setProperty("chromeoptions.mobileEmulation", "deviceName=iPhone X");
-                    val mobileEmulation: MutableMap<String, Any> = HashMap()
+                    val mobileEmulation: MutableMap<String, Any> = java.util.HashMap()
                     mobileEmulation["deviceName"] = "iPhone X"
                     chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation)
                 }
